@@ -1,25 +1,16 @@
-import { Text, View } from 'react-native';
-import style from './styles.style'
+import React from 'react';
+import { Text, View, SafeAreaView } from 'react-native';
+import styles from './stylesApp/styles';
+import TodoScreen from './src/screen/TodoScreen';
 
 export default function App() {
   return (
-    <View
-      style={style.container}>
-      {/* Today's Tasks */}
-      <View
-        style={style.tasksWrapper}>
-        <Text
-          style={style.sectionTitle}>
-          Today's Task
-        </Text>
-      </View>
-      <View
-        style={style.items}>
-        {/* This is where the tasks will go */}
-
-
-      </View>
-
-    </View>
+    <SafeAreaView 
+      style={styles.container}>
+        <View>
+            <TodoScreen />
+        </View>
+    </SafeAreaView>
   );
 }
+
